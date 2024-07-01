@@ -1,0 +1,301 @@
+@import "main.css";
+body {
+    margin: 0;
+}
+.middle-section {
+    padding:1rem 2.5rem 0 2.5rem;
+}
+.product-container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.img-container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    background-color: white;
+    padding-top: 2rem;
+}
+
+.img-container img {
+    aspect-ratio: 1080/1350;
+    width: 80%;
+}
+
+.productInfo-container{
+    padding: 2rem 7.5% 2rem 7.5%;
+    width: 55%;
+}
+
+.productInfo-container h2 {
+    color: var(--navy-blue);
+}
+
+.productInfo-container p {
+    color: #404553;
+    font-size: large;
+}
+
+.scroll-container {
+/* background-color: var(--navy-blue); */
+background-color: transparent;
+overflow: auto;
+white-space: nowrap;
+width: 100%;
+}
+
+.scroll-container img {
+    padding: 8px;
+    width: auto;
+    height: 4rem;
+    border-radius: 1rem;
+    aspect-ratio: 1080/1350;
+}
+.stars{
+    color: gold;
+    font-size: x-large;
+}
+.rating {
+    color: black;
+    font-weight: bold;
+}
+
+/* Custom styles for the select dropdown */
+.custom-select {
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    background-color: var(--navy-blue); /* Add background color */
+    font-size: 16px; /* Set font size */
+    color: var(--white); /* Set text color */
+    padding: 0.5rem;
+}
+
+/* Hover and focus styles */
+.custom-select:hover,
+.custom-select:focus {
+    border-color: var(--white);
+}
+
+.price-container p{
+    font-size: medium ;
+}
+
+.price-container del {
+    color: gray;
+}
+
+.price-container .discount{
+    font-size: small !important;
+    font-weight: bold;
+    color: #38ae2d;
+    background-color: #def0d9;
+    padding: 0 0.3rem 0 0.3rem;
+}
+
+.price-container .after{
+    font-size: large !important;
+    font-weight: bold;
+}
+
+.addToCart_btn{
+    background-color: var(--navy-blue);
+    color: white;
+    border-radius: 5px;
+    width: 50%;
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: large;
+    /* font-weight: bold; */
+    border: none;
+}
+
+.outOfStock_btn{
+    background-color: var(--red);
+    color: white;
+    border-radius: 5px;
+    width: 50%;
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 15px;
+    font-size: large;
+    /* font-weight: bold; */
+    border: none;
+}
+
+.rating-review {
+    background-color: white;
+    padding: 0.1rem 2rem 1rem 2rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.rating-review h2 {
+    color: var(--navy-blue);
+}
+
+.rating-review-container .rating-form {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.rating-container {
+    border-right: #ccc solid 1px;
+    padding: 0 5% 0 5% ;
+    white-space: nowrap;
+}
+
+.rating-container i {
+    font-size: large;
+}
+
+.bi-star-fill {
+    color: gold;
+}
+
+.review-container {
+    padding: 0 5% 0 5% ;
+    width: 50%;
+}
+
+.review-container textarea{
+    resize: none;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--white);
+    border-color: var(--navy-blue);
+}
+
+input.post_btn{
+    background-color: var(--navy-blue);
+    color: white;
+    padding: 0.8rem 2rem 0.8rem 2rem;
+    margin: 0.4rem;
+    border-radius: 5px;
+    font-size: medium;
+    /* font-weight: bold; */
+    border: none;
+}
+
+button.signIn_btn{
+    background-color: var(--red);
+    padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+    margin: 0.4rem;
+    color: white;
+    border-radius: 5px;
+    font-size: medium;
+    /* font-weight: bold; */
+    border: none;
+}
+
+button.signIn_btn:hover {
+    background-color: var(--bordo);
+    color: white;
+    cursor: pointer;
+}
+
+button , input[type="submit"]{
+    cursor: pointer;
+}
+
+select {
+    /* width: 100%; */
+    padding: 2px 4px;
+    border: 2px solid var(--navy-blue);
+    color: black;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+
+.view {
+    background-color: var(--navy-blue);
+    color: white;
+    padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+    border-radius: 5px;
+    border: none;
+    margin-left: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        
+        margin: 0;
+    }
+    .middle-section {
+        padding: 0.5rem 0.5rem 0 0.5rem;
+    }
+    .search-bar .search-input{
+        width: 65%;
+    }
+    .product-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1rem 1rem 1rem;
+        background-color: white;
+    }
+
+    .img-container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-top: unset;
+        /* padding: 1rem 1rem 1rem 1rem; */
+    }
+    .img-container img {
+        aspect-ratio: 1080/1350;
+        width: 70%;
+    }
+    .productInfo-container{
+        /* padding: 1rem 1rem 1rem 1rem; */
+        padding: unset;
+        width: 100%;
+    }
+
+    .scroll-container {
+        /* background-color: var(--navy-blue); */
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        overflow: auto;
+        /* white-space: nowrap; */
+        width: 30%;
+        height: 15rem;
+        }
+        
+        .scroll-container img {
+            padding: 10%;
+            height: 100%;
+            width: 80%;
+            border-radius: 1rem;
+            aspect-ratio: 1080/1350;
+        }
+
+        .rating-review {
+            padding: 0.1rem 1rem 1rem 1rem;
+        }
+
+        .rating-review-container .rating-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .rating-container {
+            border-right: unset;
+            padding: 0 5% 0 5% ;
+            white-space: nowrap;
+            margin-bottom: 0.5rem;
+        }
+        
+        .review-container {
+            padding: 0 5% 0 5% ;
+            width: auto;
+        }
+        
+        .review-container textarea{
+            resize: none;
+            width: 100%;
+            border-radius: 5px;
+            background-color: var(--white);
+            border-color: var(--navy-blue);
+        }
+        
+}

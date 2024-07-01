@@ -1,0 +1,55 @@
+/* @import "main.css"; */
+
+.footer{
+    /* background-color: var(--navy-blue); */
+    background-color: var(--bordo);
+    color: white;
+    /* font-family: 'nunito', sans-serif; */
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .contact{
+    display: flex;
+    justify-content: space-around;
+    /* margin-top: 1rem; */
+    padding: 0.5rem;
+  }
+
+  .contact-us{
+    display: flex;
+    justify-content: space-around;
+  }
+  .margin-right{
+    text-align: center;
+    margin-right: 2rem;
+  }
+  .margin-left{
+    text-align: center;
+    margin-left: 2rem;
+  }
+
+  .footer p {
+    margin: 0.5rem 0 0.5rem 0;
+  }
+
+  .linkFooter{
+    text-decoration: none;
+    color: white;
+  }
+
+  .linkFooter:hover{
+    color: var(--blue);
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .margin-right{
+      margin-right: unset;
+    }
+}

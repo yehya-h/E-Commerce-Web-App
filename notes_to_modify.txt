@@ -1,0 +1,2 @@
+project name in config.php
+project name in DBHelper in getMaxProductId(), getAllOrders(), getOrderById(), getOrderByAmount(),getOrderByDate (from projectv4 to project)

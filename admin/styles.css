@@ -1,0 +1,682 @@
+@import "../style/main.css";
+
+body {
+    background-color: var(--white);
+    font-family: 'nunito', sans-serif;
+    text-align: center;
+    color: var(--navy-blue);
+    padding: 0px;
+    margin: 0;
+}
+
+.button-container {
+    gap: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.button-container button {
+    padding: 20px 30px;
+    font-family: 'nunito', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--navy-blue);
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    width: 80%;
+    height: 80px;
+}
+
+.button-container button:nth-child(odd):last-child {
+    grid-column: span 2;
+    /* Span 2 columns for the last button */
+}
+
+.bar-container h3 {
+    text-align: center;
+    color: var(--navy-blue);
+}
+
+.button-container button a {
+    text-decoration: none;
+    color: var(--navy-blue);
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.bar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 1em;
+}
+
+.bar-container button,
+input,
+select {
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+}
+
+.bar-container button a {
+    text-decoration: none;
+    color: var(--navy-blue);
+}
+
+.filter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid var(--navy-blue);
+    border-radius: 8px;
+    background-color: var(--white);
+    color: black;
+    /* Text color */
+    font-family: 'nunito', sans-serif;
+    /* Font family */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+    text-align-last: center;
+}
+
+
+
+.search-button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--red);
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.page-button {
+    /*padding: 5px 1px; height width 
+   
+   border-radius: 100%;
+   
+   background-color: var(--red);*/
+    border: none;
+    color: var(--navy-blue);
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.page-button a {
+    /*padding: 5px 20px; height width 
+   
+   border-radius: 100%;
+   background-color: var(--red);*/
+    border: none;
+    color: var(--navy-blue);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.search-button a {
+    padding: 5px 20px;
+    /* height width */
+    border: none;
+    border-radius: 8px;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.search-input {
+    width: 50%;
+    height: 30%;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.date-input {
+    width: 40%;
+    height: 30%;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.range-input {
+    width: 10%;
+    height: 30%;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.i-button {
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'nunito', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: var(--red);
+    border: 2px solid var(--red);
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.i-button a {
+    color: var(--red);
+}
+
+.i-button:hover {
+    background-color: var(--red);
+    color: white;
+}
+
+.i-button:hover a {
+    color: white;
+}
+
+.i-button-stat {
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'nunito', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: var(--navy-blue);
+    border: 2px solid var(--navy-blue);
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin-right: 5px;
+}
+
+.i-button-stat a {
+    color: var(--navy-blue);
+}
+
+.i-button-stat:hover {
+    background-color: var(--navy-blue);
+    color: white;
+}
+
+.i-button-stat:hover a {
+    color: white;
+}
+
+.i-button-stat-line {
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'nunito', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin-right: 5px;
+}
+
+.i-button-stat-line a {
+    color: var(--blue);
+}
+
+.i-button-stat-line:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+.i-button-stat.active {
+    background-color: var(--navy-blue);
+    color: white;
+}
+
+.i-button-stat-line.active {
+    background-color: var(--blue);
+    color: white;
+}
+
+.table-container {
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    color: var(--navy-blue);
+}
+
+.table-container button a {
+    text-decoration: none;
+}
+
+.table-container table a {
+    text-decoration: none;
+}
+
+.table-container table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-collapse: separate;
+    /* Use separate border model */
+    border-spacing: 0;
+    /* No spacing between border cells */
+    border-radius: 8px;
+    overflow: hidden;
+    /* Hide overflow for rounded borders */
+    font-family: 'nunito', sans-serif;
+    border-color: var(--navy-blue);
+    border: none;
+}
+
+.error-container form{
+    padding: 0;
+}
+
+.table-container th {
+    border: 1px solid var(--navy-blue);
+    padding: 10px;
+    text-align: center;
+    background-color: var(--navy-blue);
+    color: white;
+    /* Text color for headers */
+}
+
+.table-container td {
+    /*border: 1px solid var(--white);  Secondary color border */
+    /*background-color: var(--white);  Secondary color background */
+    padding: 8px;
+    text-align: center;
+    border: #BDD5EA;
+    background-color: white;
+    color: black;
+    /* Text color for data cells */
+    backdrop-filter: blur(20px);
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-input {
+    width: 100%;
+    height: 30%;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+}
+
+
+.category-container button {
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.category-container button a {
+    text-decoration: none;
+    color: black;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 50%;
+    max-width: 600px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    z-index: 1001;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.show {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.popup table {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-collapse: separate;
+    /* Use separate border model */
+    border-spacing: 0;
+    /* No spacing between border cells */
+    border-radius: 8px;
+    overflow: hidden;
+    /* Hide overflow for rounded borders */
+    font-family: 'nunito', sans-serif;
+    border-color: var(--navy-blue);
+    border: none;
+    z-index: 1001;
+}
+
+.popup th {
+    border: 1px solid var(--navy-blue);
+    padding: 10px;
+    text-align: center;
+    background-color: var(--navy-blue);
+    color: white;
+    /* Text color for headers */
+}
+
+.popup td {
+    /*border: 1px solid var(--white);  Secondary color border */
+    /*background-color: var(--white);  Secondary color background */
+    padding: 8px;
+    text-align: center;
+    border: #BDD5EA;
+    background-color: white;
+    color: black;
+    /* Text color for data cells */
+    backdrop-filter: blur(20px);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black background */
+    z-index: 1000;
+    /* Ensure the overlay appears below the popup */
+}
+
+/*.popup.open,
+.overlay.open {
+   display: block;
+}*/
+.total-box {
+    width: 220px;
+    height: 40px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-items: center;
+    text-align: center;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 5px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--red);
+    border: 2px solid var(--red);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the actual file input (visually hidden) */
+.custom-file-upload input[type='file'] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.image-view {
+    width: 120px;
+    height: 120px;
+    margin-right: 10px;
+}
+
+header {
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bordo);
+    color: var(--white);
+    width: 100%;
+    z-index: 1000; 
+        max-width: 100%; /* Set your desired maximum width */
+        margin: 0 auto;
+}
+
+header a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+header h1 ,h3 {
+    text-align: center;
+    color: var(--white);
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    /* align-items: center; */
+    /* gap: 30px; */
+    width: 100%;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+    padding-left: 3em;
+}
+.center-nav{
+    display: flex;
+    align-items: center;
+    padding-left: 3em;
+    padding-right :3em;
+}
+.right-nav {
+    display: flex;
+    align-items:center;
+    /* justify-content: flex-end; */
+    padding-right :3em;
+}
+
+.left-nav div{
+    padding-right: 1em; /* Adjust the spacing as needed */
+}
+.right-nav div{
+    padding-left: 1em; /* Adjust the spacing as needed */
+}
+
+
+.account-select {
+    position: relative;
+    display: inline-block;
+}
+
+.account-select select {
+    /*appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 20px;  Adjust based on icon width */
+    position: absolute;
+    top: -8;
+    right: 0;
+    opacity: 0;
+    /* width: 100%; */
+    /* padding: 5px 10px; */
+    /* border: 2px solid var(--navy-blue); */
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--navy-blue);
+    /* Text color */
+    font-family: 'nunito', sans-serif;
+    /* Font family */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+    text-align-last: center;
+}
+
+.account-select i {
+    /* position: absolute; */
+    top: 50%;
+    right: 5px; /* Adjust based on icon position */
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure icon doesn't interfere with select */
+    /* Add additional styles as needed */
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Ensure the overlay is on top of other elements */
+}
+.popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center; /* Center-align content */
+}
+.popup-content button {
+    margin-top: 20px; /* Add some space between the form and the button */
+}
+
+.add-button {
+    padding: 10px 10px;
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--red);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.add-button button {
+    padding: 10px 10px;
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--red);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.add-button a {
+    padding: 5px 20px;
+    /* height width */
+    border: none;
+    border-radius: 8px;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.text-button {
+    border: none;
+    color: var(--white);
+    background-color: transparent;
+    font-size: small;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.text-button a {
+    border: none;
+    color: var(--red);
+    /* background-color: transparent;  */
+    text-decoration: none;
+    font-size: small;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.back-button button{
+    padding: 5px 10px;
+    /* height width */
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--red);
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}

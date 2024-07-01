@@ -1,0 +1,369 @@
+@import "main.css";
+
+body {
+    margin: 0;
+}
+
+.middle-section {
+    padding:0 1rem 1rem 1rem;
+    min-height: 68%;
+}
+
+.out-of-stock {
+    position: relative;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 100%) rotate(-30deg);
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1;
+    width: 0;
+    opacity: 50%;
+    white-space: nowrap;
+}
+
+.page-title {
+    color: var(--navy-blue);
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+.count {
+    color: var(--blue);
+    font-weight: normal;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    padding: 0.6rem;
+    margin: 0.4rem 0 0.4rem 0;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.error-message {
+    background-color: #ffcccc;
+    /* Light red */
+    padding: 0.7rem;
+    border-radius: 5px;
+    color: #cc0000;
+    /* Dark red */
+    font-weight: bold;
+    margin: 0 0 0.4rem 0 ;
+}
+
+.error {
+    margin-top: 0.5rem;
+  }
+
+.product-info {
+    padding: 0 1rem 0 1rem;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 10% 0 10% 0;
+}
+
+.empty-cart h2 {
+    color: var(--navy-blue);
+}
+
+.empty-cart p {
+    color: var(--blue);
+}
+
+.empty-cart a {
+    background-color: var(--red);
+    padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+    margin: 1rem 0.2rem 1rem 0.2rem;
+    color: white;
+    border-radius: 5px;
+    font-size: medium;
+    /* font-weight: bold; */
+    border: none;
+    text-decoration: none;
+}
+
+.empty-cart a:hover {
+    background-color: var(--bordo);
+    color: white;
+    cursor: pointer;
+
+}
+
+.cart {
+    flex-grow: 7;
+    margin-right: 0.7rem;
+    border-radius: 1rem;
+    background-color: white;
+    /* padding: 1.5em; */
+}
+
+.checkbox {
+    align-self: center;
+    padding: 0.5em;
+}
+
+.item img {
+    border-radius: 0.5rem;
+    width: 7rem;
+    /* height: 7rem; */
+    aspect-ratio: 1080/1350;
+}
+.item .product-name {
+    color: var(--navy-blue);
+    font-weight: bold;
+}
+.item .description {
+    color: #404553;
+}
+.row-title {
+    background-color: var(--navy-blue);
+    color: var(--white);
+    margin-top: 0;
+    border-radius: 1rem 1rem 0 0;
+    padding: 1rem 0 1rem 3rem;
+    font-weight: bold;
+}
+
+.prices {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: auto;
+}
+
+.price {
+    width: 6rem;
+    text-align: center;
+}
+
+.quantity {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 7.5rem;
+    justify-content: center;
+}
+
+#btn_dec {
+    border: none;
+    width: 33.33333%;
+    height: 2.5rem;
+    font-size: medium;
+}
+
+input[type='number'] {
+    width: 33.33333%;
+    height: 2.5rem;
+    text-align: center;
+    font-size: medium;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#btn_inc {
+    border: none;
+    width: 33.33333%;
+    height: 2.5rem;
+    font-size: medium;
+    background-color: var(--navy-blue);
+    color: var(--white);
+}
+
+.summary {
+    flex-grow: 3;
+    text-align: center;
+    background-color: var(--navy-blue);
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    min-width: 20%;
+    /* height: fit-content; */
+}
+
+.title {
+    background-color: var(--white) ;
+    color: var(--navy-blue) !important;
+    padding: 0.1rem;
+    border-radius: 5px;
+    /* text-align: center; */
+}
+
+.title h3 {
+    /* padding-left: 1rem; */
+    color: var(--navy-blue) !important;
+    text-align: center;
+    margin: 0.5rem;
+    white-space: nowrap;
+}
+
+.sp {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem;
+}
+
+.middle-section input[type='submit'] {
+    background-color: var(--red);
+    padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+    margin: 0.4rem;
+    color: white;
+    border-radius: 5px;
+    font-size: medium;
+    /* font-weight: bold; */
+    width: 100%;
+    border: none;
+
+}
+
+.middle-section input[type='submit']:hover {
+    background-color: var(--bordo);
+    color: white;
+    cursor: pointer;
+}
+
+.remove {
+    background-color: white;
+    padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+    margin: 0.2rem;
+    color: var(--red);
+    border-radius: 1rem;
+    /* font-size: normal; */
+    font-weight: bold;
+    border: 2px solid var(--red);
+}
+
+.shopping {
+    background-color: white;
+    padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+    margin: 0 0 0 0;
+    color: var(--navy-blue);
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid var(--navy-blue);
+}
+
+@media screen and (max-width: 600px) {
+
+    /* Styles for phones */
+    /* Adjustments for smaller screens */
+    body {
+        width: fit-content;
+        margin: 0;
+    }
+
+    .middle-section {
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        min-height: 44%;
+    }
+
+    .page-info {
+        display: flex;
+        flex-direction: column;
+        /* width: fit-content; */
+    }
+
+    .cart {
+        width: auto;
+        flex-grow: unset;
+        margin-right: unset;
+        margin-bottom: 1rem;
+    }
+
+    .quantity {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 4.5rem;
+        justify-content: center;
+
+    }
+
+    #btn_inc,
+    #btn_dec,
+    input[type='number'] {
+        width: 2.5rem;
+    }
+
+    .description {
+        display: none;
+    }
+
+    .summary {
+        width: auto;
+        flex-grow: unset;
+    }
+
+    .out-of-stock {
+        left: 45%;
+    }
+}
+
+/* Media query for tablets */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+    /* Styles for tablets */
+    /* Adjustments for medium-sized screens */
+    body {
+        
+        margin: 0;
+    }
+
+    .middle-section {
+        padding: 0 0.5rem 0 0.5rem;
+    }
+
+    .page-info {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .cart {
+        width: auto;
+        flex-grow: unset;
+        margin-right: unset;
+        margin-bottom: 1.5rem;
+    }
+
+    .summary {
+        width: auto;
+        flex-grow: unset;
+    }
+
+    .description {
+        display: none;
+    }
+}
+
+/* Media query for larger screens (desktops, laptops, etc.) */
+@media only screen and (min-width: 1024px) {
+
+    /* Styles for larger screens */
+    /* Adjustments for desktop and larger screens */
+    .page-info {
+        display: flex;
+        flex-direction: row;
+    }
+}

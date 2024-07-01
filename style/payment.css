@@ -1,0 +1,405 @@
+@import "main.css";
+
+body {
+  margin: 0;
+}
+
+.middle-section {
+  padding:0 1rem 0 1rem;
+}
+
+.error-message {
+  background-color: #ffcccc;
+  /* Light red */
+  padding: 10px;
+  border-radius: 5px;
+  color: #cc0000;
+  /* Dark red */
+  font-weight: bold;
+  margin: 0 0 0.4rem 0 ;
+}
+
+.error {
+  margin-top: 0.5rem;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  /* Semi-transparent background */
+  z-index: 999;
+  /* Ensure the overlay is on top of other elements */
+}
+
+.popup-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  /* Center-align content */
+}
+
+.popup-content button,
+.popup-content input[type='submit'] {
+  padding: 0.4em 0.7em 0.4em 0.7em;
+}
+
+.form table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form h2 {
+  color: var(--red);
+}
+
+.form span {
+  color: var(--navy-blue);
+  font-weight: bold;
+  width: 40%;
+}
+
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='number'] {
+  /* width: 100%; */
+  height: 30%;
+  padding: 5px 5px;
+  border-radius: 8px;
+  border: none;
+  background-color: white;
+}
+
+.form select {
+  /* width: 100%; */
+  padding: 5px 10px;
+  border: 2px solid var(--navy-blue);
+  color: black;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.page-title {
+  color: var(--navy-blue);
+}
+
+.middle-section button,
+.middle-section input[type='submit'] {
+  background-color: var(--red);
+  padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+  margin: 0.4rem;
+  color: white;
+  border-radius: 5px;
+  font-size: medium;
+  /* font-weight: bold; */
+  border: none;
+
+}
+
+.middle-section button:hover,
+.middle-section input[type='submit']:hover {
+  background-color: var(--bordo);
+  color: white;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.title {
+  background-color: var(--navy-blue);
+  color: var(--white);
+  padding: 0.01em;
+  border-radius: 5px;
+  /* text-align: center; */
+}
+
+.info h3 {
+  padding-left: 1em;
+  text-align: left;
+}
+
+.shipmentandpayment {
+  flex-grow: 8;
+  background-color: white;
+  margin-right: 0.7em;
+  border-radius: 1em;
+  padding: 1.5em;
+}
+
+.button {
+  text-align: center;
+}
+
+.shipmentinfo {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  align-items: center;
+  border-bottom: 1px solid #9a9a9a;
+}
+
+.shipmentinfo input[type="radio"] {
+  width: 10%;
+}
+
+.shipmentinfo div {
+  width: 90%;
+  padding: 0.5em 0 0.5em 0;
+}
+
+.shipmentinfo-li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.shipmentinfo-li div {
+  width: 50%;
+  /* padding: 1em 0 1em 0; */
+}
+
+.shipmentinfo span {
+  font-weight: 550;
+  color: var(--navy-blue);
+}
+
+li {
+  list-style-type: none;
+  line-height: 1.5em;
+}
+
+.paymentmethod {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5em;
+}
+
+.paymentinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #9a9a9a;
+}
+
+.paymentinfo input[type="radio"] {
+  width: 10%;
+}
+
+.paymentinfo div {
+  width: 90%;
+  padding: 1em 0 1em 0;
+}
+
+.paymentinfo span {
+  font-weight: 550;
+  color: var(--navy-blue);
+}
+
+#shipForm {
+  margin-bottom: 1rem;
+}
+
+.order {
+  flex-grow: 4;
+  text-align: center;
+  background-color: white;
+  border: 1px solid var(--white);
+  border-radius: 1em;
+  padding: 1.5em;
+}
+
+.b {
+  font-weight: 550;
+}
+
+.bill {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  /* font-weight: 550; */
+}
+
+.item img {
+  width: 50px;
+  /* Adjust size as needed  */
+  /* height: auto; */
+  height: 50px;
+  /* Ensure image is square */
+  margin-right: 10px;
+  /* Make the image circular */
+  border-radius: 50%;
+  /* Ensure the image fills the circular space */
+  object-fit: cover;
+}
+
+.fake-img {
+  visibility: hidden;
+}
+
+.item .name {
+  flex: 1;
+  /* Distribute remaining space evenly */
+}
+
+.item .quantity {
+  width: 15%;
+  /* Adjust width as needed */
+  text-align: center;
+  /* Center quantity text */
+}
+
+.item .price {
+  width: 25%;
+  /* Adjust width as needed */
+  text-align: right;
+  /* Align price text to the right */
+}
+
+.sp {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2em;
+}
+
+/* Remove default styles */
+.middle-section input[type="range"] {
+  -webkit-appearance: none;
+  /* Remove default styles in WebKit browsers */
+  appearance: none;
+  /* Remove default styles in other browsers */
+  width: 100%;
+  /* Set the width of the range input */
+  margin-top: 1em;
+}
+
+/* Track */
+.middle-section input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  /* Set the width of the track */
+  height: 0.5em;
+  /* Set the height of the track */
+  background-color: #ddd;
+  /* Set the background color of the track */
+  border-radius: 3px;
+  /* Set the border radius of the track */
+}
+
+.middle-section input[type="range"]::-moz-range-track {
+  width: 100%;
+  /* Set the width of the track */
+  height: 0.5em;
+  /* Set the height of the track */
+  background-color: #ddd;
+  /* Set the background color of the track */
+  border-radius: 3px;
+  /* Set the border radius of the track */
+}
+
+/* Thumb */
+.middle-section input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Remove default styles */
+  appearance: none;
+  /* Remove default styles */
+  width: 1.4em;
+  /* Set the width of the thumb */
+  height: 1.4em;
+  /* Set the height of the thumb */
+  background-color: var(--navy-blue);
+  /* Set the background color of the thumb */
+  border-radius: 50%;
+  /* Set the border radius of the thumb to create a circle */
+  cursor: pointer;
+  /* Set cursor to pointer to indicate interactivity */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.middle-section input[type="range"]::-moz-range-thumb {
+  width: 1.4em;
+  /* Set the width of the thumb */
+  height: 1.4em;
+  /* Set the height of the thumb */
+  background-color: var(--navy-blue);
+  /* Set the background color of the thumb */
+  border-radius: 50%;
+  /* Set the border radius of the thumb to create a circle */
+  cursor: pointer;
+  /* Set cursor to pointer to indicate interactivity */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Optional: Set styles for when the input is in focus */
+.middle-section input[type="range"]:focus {
+  outline: none;
+  /* Remove default focus outline */
+}
+
+@media screen and (max-width: 1024px) {
+
+  /* Styles for phones */
+  /* Adjustments for smaller screens */
+  body {
+    margin: 0;
+  }
+
+  .middle-section {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+  }
+
+  .info {
+    flex-direction: column;
+  }
+
+  .shipmentandpayment {
+    flex-grow: unset;
+    margin-right: unset;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+  }
+
+  .shipmentinfo-li {
+    display: unset;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .shipmentinfo-li div {
+    width: auto;
+    /* padding: 1em 0 1em 0; */
+  }
+
+  .order {
+    padding: 0.8rem;
+  }
+}

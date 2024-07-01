@@ -1,0 +1,286 @@
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    /* align-items: center; */
+    /* gap: 30px; */
+    width: 100%;
+}
+
+header {
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: var(--bordo);
+   color: var(--white);
+   width: 100%;
+   z-index: 1000; 
+       max-width: 100%; /* Set your desired maximum width */
+       margin: 0 auto;
+}
+
+header a {
+   color: var(--white);
+   text-decoration: none;
+}
+
+header h1 ,h3 {
+   text-align: center;
+   color: var(--white);
+   padding-top: -0.5rem;
+}
+
+.phone-logo{
+    display: none;
+}
+
+.center-nav{
+    display: flex;
+    align-items: center;
+    padding-left: 3em;
+    padding-right :3em;
+    padding-top: 0.5rem;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width : 130%;
+}
+
+#filter{
+    width:65%;
+}
+
+.search-bar form{
+    width:120%;
+}
+
+.filter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid var(--navy-blue);
+    border-radius: 8px;
+    background-color: var(--white);
+    color: black;
+    font-family: 'nunito', sans-serif;
+    box-sizing: border-box;
+    text-align-last: center;
+}
+
+.filter-button {
+    padding: 5px 10px;
+    /* height width */
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--navy-blue);
+    font-size: medium;
+    /* font-weight: bold; */
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.filter-button a {
+    padding: 5px 20px;
+    /* height width */
+    border: none;
+    border-radius: 8px;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.search-input {
+    /* width: 80%; */
+    height: 30%;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.search-button {
+    padding: 5px 10px;
+    /* height width */
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--navy-blue);
+    font-size: medium;
+    /* font-weight: bold; */
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.search-button a {
+    padding: 5px 20px;
+    /* height width */
+    border: none;
+    border-radius: 8px;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.right-nav {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding-right :3em;
+}
+
+.account-select {
+    position: relative;
+    display: inline-block;
+}
+
+.account-select select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    /* width: 100%; */
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--navy-blue);
+    font-family: 'nunito', sans-serif;
+    box-sizing: border-box;
+}
+
+.account-select i {
+    /* position: absolute; */
+    top: 50%;
+    right: 5px; /* Adjust based on icon position */
+    transform: translateY(-50%);
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.cart-icon{
+    position: relative;
+}
+
+.cart-icon span{
+    display: flex;
+    width:22px;
+    height: 22px;
+    background-color: var(--navy-blue);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    font-size: small;
+}
+
+
+/*------------------------------------------------------------PHONE----------------------------------------------------------------------*/
+
+.bottom-bar-phone{
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .nav-container{
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    header{
+        height:13%;
+    }
+
+    .pc-logo{
+        display: none;
+    }
+
+    .phone-logo{
+        display: block;
+    }
+
+    .center-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 0;
+        padding-right :0;
+        padding-top: 0rem;
+    }
+
+    .right-nav{
+        display: none;
+    }
+
+    .search-bar {
+        padding-top: 1%;
+        flex-direction: column;
+        gap: 0px;
+        width : 100%;
+    }
+
+    .search-bar .search-input{
+        height:auto;
+        width: 70%;
+    }
+    
+    .search-bar form{
+        width:100%;
+    }
+
+    #filter{
+        width:60%;
+        padding-bottom: 0;
+        margin-block-end: 0;
+    }
+
+    .filter-button {
+        padding: 5px 5px;
+    }
+
+    .bottom-bar-phone{
+        display: block;
+        position: sticky;
+        bottom: 0;
+        width: 95%;
+        background-color: #f8f9fa;
+        /* padding: 10px; */
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        overflow-x: hidden;
+        height: 10%;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .bar-phone-items{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .middle-section{
+       /* height: 77%;*/
+        overflow-y: auto;
+    }
+}

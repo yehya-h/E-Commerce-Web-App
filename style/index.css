@@ -1,0 +1,549 @@
+@import "../style/main.css";
+
+body {
+    background-color: var(--white);
+    font-family: 'nunito', sans-serif;
+    text-align: center;
+    color: var(--navy-blue);
+    padding: 0px;
+    z-index: 999;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Ensure the overlay is on top of other elements */
+}
+.popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center; /* Center-align content */
+}
+.popup-content button {
+    margin-top: 20px; /* Add some space between the form and the button */
+}
+
+.account-select {
+    position: relative;
+    display: inline-block;
+}
+
+.account-select select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    /* width: 100%; */
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--navy-blue);
+    font-family: 'nunito', sans-serif;
+    box-sizing: border-box;
+}
+
+.account-select i {
+    /* position: absolute; */
+    top: 50%;
+    right: 5px; /* Adjust based on icon position */
+    transform: translateY(-50%);
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.add-button {
+    padding: 10px 10px;
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--red);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.add-button button {
+    /* padding: 10px 10px; */
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--red);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.add-button a {
+    padding: 5px 20px;
+    /* height width */
+    border: none;
+    border-radius: 8px;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: var(--bordo);
+   color: var(--white);
+   width: 100%;
+   z-index: 1000; 
+       max-width: 100%; /* Set your desired maximum width */
+       margin: 0 auto;
+}
+
+header a {
+   color: var(--white);
+   text-decoration: none;
+}
+
+header h1 ,h3 {
+   text-align: center;
+   color: var(--white);
+   padding-top: -0.5rem;
+}
+
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    /* align-items: center; */
+    /* gap: 30px; */
+    width: 100%;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+    padding-left: 3em;
+}
+
+.center-nav{
+    display: flex;
+    align-items: center;
+    padding-left: 3em;
+    padding-right :3em;
+    padding-top: 0.5rem;
+}
+
+.right-nav {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding-right :3em;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width : 130%;
+}
+
+#filter{
+    width:65%;
+}
+
+.search-bar form{
+    width:120%;
+}
+
+.search-input {
+    width: 80%;
+    height: 30%;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.search-button {
+    padding: 5px 10px;
+    /* height width */
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--navy-blue);
+    font-size: medium;
+    /* font-weight: bold; */
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.search-button a {
+    padding: 5px 20px;
+    /* height width */
+    border: none;
+    border-radius: 8px;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.filter-button {
+    padding: 5px 10px;
+    /* height width */
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--navy-blue);
+    font-size: medium;
+    /* font-weight: bold; */
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.filter-button a {
+    padding: 5px 20px;
+    /* height width */
+    border: none;
+    border-radius: 8px;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.filter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid var(--navy-blue);
+    border-radius: 8px;
+    background-color: var(--white);
+    color: black;
+    font-family: 'nunito', sans-serif;
+    box-sizing: border-box;
+    text-align-last: center;
+}
+.cart-icon{
+    position: relative;
+}
+
+.cart-icon span{
+    display: flex;
+    width:22px;
+    height: 22px;
+    background-color: var(--navy-blue);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    font-size: small;
+}
+
+.bottom-bar-phone{
+    display: none;
+}
+
+.phone-logo{
+    display: none;
+}
+
+.displayProd {
+    width: 10rem;
+    text-overflow: ellipsis;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+    background-color: white;
+    padding : 5px 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    width:180px;
+    transition: transform 0.3s ease , box-shadow 0.3s ease;
+    /* line-height: 1.2;
+    position: relative;
+    box-sizing: border-box; */
+}
+
+.displayProd:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+.displayProd img{
+    padding-top: 1em;
+    aspect-ratio: 1080/1350;
+}
+
+.prodContainer {
+    /*new*/ position: relative;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: hidden; /*new*/
+    scroll-behavior: smooth;
+    padding-left: 2em;
+    padding-right: 2em; 
+    gap : 1em;
+    width:90%;
+    /* margin-left: 2em;
+    margin-right: 2em; */
+}
+
+span.star {
+    color: gold;
+    padding-bottom: 0.2rem;
+}
+
+button.leftScroll {
+    padding: 10px;
+    border-radius: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left : 0;
+    margin-left: 2em;
+    box-shadow: 0 0 3px -1px rgba(0, 0, 0, .5);
+    z-index: 1000;
+    color: var(--navy-blue);
+
+}
+
+button.rightScroll {
+    padding: 10px;
+    border-radius: 40%;
+    float: right;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right:0;
+    margin-right: 2em;
+    color: var(--navy-blue);
+}
+
+button.leftScroll:hover,
+button.rightScroll:hover{
+    background-color: var(--navy-blue);
+    color:white;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.displayProd h3{
+    color: var(--navy-blue);
+}
+
+.price{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.discount-price{
+    font-size: small;
+}
+
+.price-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title{
+    color : white;
+    /* background-color: var(--navy-blue); */
+    width:100%;
+    margin-left: 25%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: ; */
+}
+
+.section-title img{
+    width:50%;
+    height: 10%;
+    border-radius:8px;
+}
+
+h3 a{
+    text-decoration: none;
+}
+
+.addBtn{
+    border-radius: 10px;
+    background-color: transparent;
+    color : var(--navy-blue);
+    border: none;
+    font-weight: large;
+  }
+
+  .product-wrapper{
+    position: relative;
+    display: inline-block;
+  }
+
+  .add-to-cart-form {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50;
+    width: 60;
+}
+
+.middle-section{
+    min-height: 68%;
+}
+
+@media screen and (max-width: 768px) {
+    .popup-content{
+        width: 75%;
+    }
+
+    .bottom-bar-phone{
+        display: block;
+        position: sticky;
+        bottom: 0;
+        width: 95%;
+        background-color: #f8f9fa;
+        /* padding: 10px; */
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        overflow-x: hidden;
+        height: 10%;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    
+
+    .middle-section{
+        /*height: 77%;*/
+        overflow-y: auto;
+    }
+
+    .bar-phone-items{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .right-nav{
+        display: none;
+    }
+
+    .left-nav{
+        padding-left: 0;
+        padding-right: 1.5rem;
+    }
+
+    .pc-logo{
+        display: none;
+    }
+
+    .phone-logo{
+        display: block;
+    }
+
+    header{
+        height:13%;
+    }
+    .nav-container{
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    .center-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 0;
+        padding-right :0;
+        padding-top: 0rem;
+    }
+
+    .search-bar {
+        padding-top: 1%;
+        flex-direction: column;
+        gap: 0px;
+        width : 100%;
+    }
+    
+    #filter{
+        width:60%;
+        padding-bottom: 0;
+        margin-block-end: 0;
+    }
+
+    .search-bar .search-input{
+        height:auto;
+        width: 70%;
+    }
+    
+    .search-bar form{
+        width:100%;
+    }
+
+    .filter-button {
+        padding: 5px 5px;
+    }
+    
+    .prodContainer{
+        padding-left: 0em;
+        padding-right: 0.5em;
+        gap: 0.5em;
+        width: 85%;
+        /* overflow: auto; */
+    overflow-x: auto; 
+    }
+
+    button.leftScroll{
+    margin-left: 1em;
+    }
+
+    button.rightScroll{
+        margin-right: 0.4em;
+    }
+
+    .section-title img{
+        width:80%;
+    }
+
+    .section-title{
+        margin-left: 10%;
+    }
+}

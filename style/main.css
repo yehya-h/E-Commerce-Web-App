@@ -1,0 +1,34 @@
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
+
+:root {
+    --bordo: #780000;
+    --red: #C1121F;
+    --white: #F1F2F6;
+    --blue: #669BBC;
+    --navy-blue: #1D3557;
+    --cream: #FDF0D5;
+}
+
+@font-face {
+    font-family: 'nunito';
+    src: url('fonts\Nunito\Nunito-Italic-VariableFont_wght.ttf') format('ttf'),
+        url('fonts\Nunito\Nunito-VariableFont_wght.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'rubik';
+    src: url('fonts\Rubik\Rubik-Italic-VariableFont_wght.ttf') format('ttf'),
+        url('fonts\Rubik\Rubik-VariableFont_wght.ttf') format('ttf');
+}
+
+body {
+    background-color: var(--white);
+    font-family: 'nunito', sans-serif;
+    cursor: default;
+    user-select: none;
+    margin:0;
+}
+button,input[type='checkbox'] {
+    cursor: pointer;
+}
+

@@ -1,0 +1,627 @@
+@import "../style/main.css";
+
+body {
+    background-color: var(--white);
+    font-family: 'nunito', sans-serif;
+    text-align: center;
+    color: var(--navy-blue);
+    padding: 0px;
+    margin:0;
+}
+
+.centered-div {
+    width: 28%;
+    height: 65%;
+    color: var(--white);
+    background-color: var(--navy-blue);
+    /* Background color */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+    /* Box shadow */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-div form {
+    width: 70%;
+}
+
+.add-input {
+    width: 100%;
+    height: 20%;
+    padding: 8px 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.fields-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.fields-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fields-row img,
+p {
+    padding-right: 0.4rem;
+    /* Add spacing between the image and the text */
+}
+
+.submit-button {
+    padding: 5px 10px;
+    /* height width */
+    width: 100%;
+    height: 15%;
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--red);
+    font-size: medium;
+    /* font-weight: bold; */
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.text-button {
+    border: none;
+    color: var(--white);
+    background-color: transparent;
+    font-size: small;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.text-button a {
+    border: none;
+    color: var(--red);
+    /* background-color: transparent;  */
+    text-decoration: none;
+    font-size: small;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    font-weight: bold;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .centered-div {
+        width: 75%;
+        /* Reduce width on larger screens */
+        height: 80%;
+    }
+
+    .submit-button {
+        height: 10%;
+    }
+
+    .add-input{
+        width:100%;
+    }
+}
+
+.otp {
+    width: 28%;
+    height: 75%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.otp h2 {
+    color: var(--navy-blue);
+}
+
+.otp form {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: fit-content;
+    background-color: white;
+    border-radius: 9px;
+    padding: 20px;
+    margin: 0 auto;
+    /* center the form horizontally */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    /* center the form vertically */
+}
+
+.form-inputs {
+    margin-top: 1rem;
+    /* use rem for margin */
+}
+
+.form-inputs input {
+    width: 2em;
+    /* use em for width */
+    height: 2em;
+    /* use em for height */
+    text-align: center;
+    border: none;
+    border-bottom: 0.15em solid #d2d2d2;
+    /* use em for border-bottom width */
+    margin: 0 1em;
+    /* use em for margin */
+}
+
+.form-inputs input:focus {
+    border-bottom: 0.15em solid royalblue;
+    /* use em for border-bottom width */
+    outline: none;
+}
+
+.otp-submit-button {
+    padding: 5px 10px;
+    /* height width */
+    width: 100%;
+    height: 10%;
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--red);
+    font-size: medium;
+    /* font-weight: bold; */
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .otp {
+        width: 95%;
+        /* Reduce width on larger screens */
+        height: 80%;
+    }
+}
+
+
+.create-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+/* .create-container form {
+    width : 100%;
+} */
+
+.create-container h1 {
+    color: var(--navy-blue);
+}
+
+.create-container table {
+    position: relative;
+    width:100%;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+.table-container th {
+    /* padding: 10px; */
+    text-align: center;
+    color: var(--navy-blue);
+}
+
+.table-container td {
+    /* padding: 8px; */
+    text-align: center;
+    color: black;
+}
+
+.table-container-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+.select-button {
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid var(--navy-blue);
+    border-radius: 8px;
+    background-color: var(--white);
+    color: black;
+    font-family: 'nunito', sans-serif;
+    box-sizing: border-box;
+    text-align-last: center;
+}
+
+.add-button {
+    padding: 10px 10px;
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--red);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.add-button button {
+    /* padding: 10px 10px; */
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--red);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.payment-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1rem;
+    gap: 20px;
+    border: 1px solid var(--navy-blue);
+    border-radius: 8px;
+}
+
+.payment-container .add-input {
+    width:100%;
+}
+
+.text-button-acc {
+    border: none;
+    color: var(--navy-blue);
+    background-color: transparent;
+    font-size: small;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.text-button-acc a {
+    border: none;
+    color: var(--red);
+    /* background-color: transparent;  */
+    text-decoration: none;
+    font-size: small;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.acc-container {
+    border: 1px solid var(--navy-blue);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--navy-blue);
+}
+
+@media (max-width: 768px) {
+    .payment-container {
+        flex-direction: column;
+    }
+
+    .acc-container {
+        flex-direction: column;
+    }
+}
+
+.reset {
+    width: 28%;
+    height: 65%;
+    background-color: var(--navy-blue);
+    /* Background color */
+    color: var(--white);
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+    /* Box shadow */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset form {
+    width: 70%;
+}
+
+@media (max-width: 768px) {
+    .reset {
+        width: 75%;
+        height: 80%;
+    }
+
+    .submit-button {
+        height: 10%;
+    }
+
+}
+
+.table-container-display {
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    color: var(--navy-blue);
+}
+
+.table-container-display button a {
+    text-decoration: none;
+}
+
+.table-container-display table a {
+    text-decoration: none;
+}
+
+.table-container-display table {
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: 30px; */
+    /* margin-top: 30px; */
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'nunito', sans-serif;
+    border-color: var(--navy-blue);
+    border: none;
+}
+
+.table-container-display th {
+    border: 1px solid var(--navy-blue);
+    padding: 10px;
+    text-align: center;
+    background-color: var(--navy-blue);
+    color: white;
+    /* Text color for headers */
+}
+
+.table-container-display td {
+    /*border: 1px solid var(--white);  Secondary color border */
+    /*background-color: var(--white);  Secondary color background */
+    padding: 8px;
+    text-align: center;
+    border: #BDD5EA;
+    background-color: white;
+    color: black;
+    /* Text color for data cells */
+    backdrop-filter: blur(20px);
+}
+
+.i-button {
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'nunito', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: var(--red);
+    border: 2px solid var(--red);
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.i-button a {
+    color: var(--red);
+}
+
+.i-button:hover {
+    background-color: var(--red);
+    color: white;
+}
+
+.i-button:hover a {
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+
+    .create-container {
+        width: 100%;
+        font-size: medium;
+    }
+
+    .create-container form {
+        width: 90%;
+    }
+
+    .table-container {
+        width:100%;
+    }
+
+    .table-container-display table {
+        width: 100%;
+        border-radius: 8px;
+        border-collapse: collapse;
+        display: flex;
+        flex-direction: column;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    .table-container-display table th,
+    .table-container-display table td {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        /* border-color: var(--navy-blue); */
+        border: var(--navy-blue);
+        /* backdrop-filter: blur(20px); */
+    }
+
+    .table-container-display table td::before {
+        content: attr(label);
+        font-weight: bold;
+        /* width: 60%;
+        min-width: 60%; */
+        color: var(--navy-blue);
+        /* padding-right: 2rem; */
+        display: flex;
+        justify-content: row;
+        justify-items: center;
+    }
+
+    .table-container-display table tr {
+        border-bottom: 1px solid var(--navy-blue);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table-radius {
+        border-radius: 8px;
+        /* Apply border-radius to the container */
+        overflow: hidden;
+        /* Ensure border-radius is applied to the table */
+        border: 1px solid var(--navy-blue);
+    }
+
+    .table-container-field{
+        width:100%
+    }
+}
+
+.create-container h2 {
+    color : var(--navy-blue);
+}
+
+.order-table-container {
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    color: var(--navy-blue);
+}
+
+.order-table-container button a {
+    text-decoration: none;
+}
+
+.order-table-container table a {
+    text-decoration: none;
+}
+
+.order-table-container table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'nunito', sans-serif;
+    border-color: var(--navy-blue);
+    border: none;
+}
+
+.order-table-container th {
+    border: 1px solid var(--navy-blue);
+    padding: 10px;
+    text-align: center;
+    background-color: var(--navy-blue);
+    color: white;
+}
+
+.order-table-container td {
+    padding: 8px;
+    text-align: center;
+    border: #BDD5EA;
+    background-color: white;
+    color: black;
+    backdrop-filter: blur(20px);
+}
+
+.page-button {
+    border: none;
+    color: var(--navy-blue);
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+}
+
+.page-button a {
+    border: none;
+    color: var(--navy-blue);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.add-button a {
+    padding: 5px 20px;
+    /* height width */
+    border: none;
+    border-radius: 8px;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: medium;
+    font-family: 'nunito', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    z-index: 999;
+    /* Ensure the overlay is on top of other elements */
+}
