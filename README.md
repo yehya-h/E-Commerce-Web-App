@@ -4,3 +4,5 @@ A high-level E-Commerce Application using PHP,MySQL,HTML,CSS,JS with many automa
 
 # You can try this web app also by visiting this URL: https://shopandshiponlinetrading.000webhostapp.com/ 
 (Note that some features like email verification link might not work due to the hosting restrictions and security measures)
+
+## For more details, you can check the S&S_V2.pdf which contains a detailed report about this project.
